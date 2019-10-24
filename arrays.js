@@ -23,8 +23,16 @@ const everyOtherItem = (items) => {
 
 /** 3. smallestNItems */
 const smallestNItems = (items, n) => {
-	// Replace this with your code
+  function compare(a, b) {
+    return a - b;
+  }
+
+  const sortedItems = items.sort(compare);
+
+  console.log(sortedItems.slice(0, n));
+
 };
 
 // printIndices(['apple', 'berry', 'cherry']);
-everyOtherItem(['apple', 'berry', 'cherry']);
+// everyOtherItem(['apple', 'berry', 'cherry']);
+smallestNItems([1, 30, 4, 21, 100000], 2);
